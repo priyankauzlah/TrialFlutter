@@ -1,34 +1,20 @@
-import 'package:flutter/cupertino.dart';
+// import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:trial_flutter/login_screen.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MainClass());
 
-
-class MyApp extends StatelessWidget {
+class MainClass extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    var name = 'Uzlah Priambodo';
-    var _titleStyle = TextStyle(
-        fontWeight: FontWeight.bold,
-        fontStyle: FontStyle.italic,
-        fontSize: 20,
-        color: Colors.blue[200]
-    );
-
     return MaterialApp(
-      title: 'Welcome To Flutter',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Welcome to Flutter'),
-        ),
-        body: Center(
-          child: Text(
-            "Halo $name!",
-            style: _titleStyle,
-          ),
-        ),
+      title: 'Dicoding',
+      theme: ThemeData(
+        primarySwatch: Colors.grey,
+        fontFamily: 'Quicksand',
       ),
+      home: LoginScreen(),
     );
   }
 }
